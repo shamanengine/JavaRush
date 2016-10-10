@@ -36,7 +36,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        //String test0 = "(0501234567";
         String test000 = "0(111)1-1-1";
         String test001 = "0(111)111";
         String test01 = "0501234567";
@@ -65,6 +64,5 @@ public class Solution {
         System.out.println(checkTelNumber(test7));
         System.out.println(checkTelNumber(test8));
         System.out.println(checkTelNumber(test9));
-
     }
 }
