@@ -142,46 +142,6 @@ public class Solution {
         return stocks;
     }
 
-/*
-public static class Stock extends HashMap {
-        public Stock(String name, String symbol, double open, double last) {
-            put("name", name);
-            put("symbol", symbol);
-            put("open", open);
-            put("last", last);
-            put("date", getRandomDate(2020));
-        }
-
-        public Stock(String name, String symbol, double change, Date date) {
-            put("name", name);
-            put("symbol", symbol);
-            put("date", date);
-            put("change", change);
-        }
-    }
-
-    public static List<Stock> getStocks() {
-        List<Stock> stocks = new ArrayList();
-
-        stocks.add(new Stock("Fake Apple Inc.", "AAPL", 125.64, 123.43));
-        stocks.add(new Stock("Fake Cisco Systems, Inc.", "CSCO", 25.84, 26.3));
-        stocks.add(new Stock("Fake Google Inc.", "GOOG", 516.2, 512.6));
-        stocks.add(new Stock("Fake Intel Corporation", "INTC", 21.36, 21.53));
-        stocks.add(new Stock("Fake Level 3 Communications, Inc.", "LVLT", 5.55, 5.54));
-        stocks.add(new Stock("Fake Microsoft Corporation", "MSFT", 29.56, 29.72));
-
-        stocks.add(new Stock("Fake Nokia Corporation (ADR)", "NOK", .1, getRandomDate()));
-        stocks.add(new Stock("Fake Oracle Corporation", "ORCL", .15, getRandomDate()));
-        stocks.add(new Stock("Fake Starbucks Corporation", "SBUX", .03, getRandomDate()));
-        stocks.add(new Stock("Fake Yahoo! Inc.", "YHOO", .32, getRandomDate()));
-        stocks.add(new Stock("Fake Applied Materials, Inc.", "AMAT", .26, getRandomDate()));
-        stocks.add(new Stock("Fake Comcast Corporation", "CMCSA", .5, getRandomDate()));
-        stocks.add(new Stock("Fake Sirius Satellite", "SIRI", -.03, getRandomDate()));
-
-        return stocks;
-    }
-*/
-
     public static Date getRandomDate() {
         return getRandomDate(1970);
     }
