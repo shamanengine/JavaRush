@@ -25,19 +25,20 @@ package com.javarush.test.level22.lesson13.task03;
 */
 public class Solution {
 
-    public static boolean checkTelNumber(String telNumber) {
+public static boolean checkTelNumber(String telNumber) {
+        telNumber = telNumber.replaceAll("\\s", "");
         return (
                 (
                         (telNumber.matches("^\\+.*") && (telNumber.length() - telNumber.replaceAll("\\d", "").length() == 12))
-                        || (telNumber.matches("(^\\d|\\().*") && (telNumber.length() - telNumber.replaceAll("\\d", "").length()) == 10)
+                                || (telNumber.matches("(^\\d|\\().*") && (telNumber.length() - telNumber.replaceAll("\\d", "").length()) == 10)
                 )
                         && telNumber.matches("(\\+\\d+)?\\d*(\\(\\d{3}\\))?\\d+\\-?\\d+\\-?\\d+")
         );
     }
-
+    
     public static void main(String[] args) {
-        String test000 = "0(111)1-1-1";
-        String test001 = "0(111)111";
+        String test0 = "+38 073 070 31 64";
+        String test00 = "+38(073)070 31 64";
         String test01 = "0501234567";
         String test1 = "+380501234567";
         String test2 = "+38(050)1234567";
@@ -49,10 +50,13 @@ public class Solution {
         String test7 = "050ххх4567";
         String test8 = "050123456";
         String test9 = "(0)501234567";
+        String test10 = "0(111)1-1-1";
+        String test11 = "0(111)111";
 
         System.out.println("==True==");
-        System.out.println(checkTelNumber(test000));
-        System.out.println(checkTelNumber(test001));
+        System.out.println(checkTelNumber(test0));
+        System.out.println(checkTelNumber(test00));
+        System.out.println(checkTelNumber(test01));
         System.out.println(checkTelNumber(test1));
         System.out.println(checkTelNumber(test2));
         System.out.println(checkTelNumber(test3));
@@ -64,5 +68,7 @@ public class Solution {
         System.out.println(checkTelNumber(test7));
         System.out.println(checkTelNumber(test8));
         System.out.println(checkTelNumber(test9));
+        System.out.println(checkTelNumber(test10));
+        System.out.println(checkTelNumber(test11));
     }
 }
